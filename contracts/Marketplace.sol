@@ -1,14 +1,15 @@
 pragma solidity ^0.8.19;
 
-import "@openzeppelin/contracts/utils/Counters.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+// import "@openzeppelin/contracts/utils/Counters.sol";
+// import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract Marketplace is ReentrancyGuard {
     using Counters for Counters.Counter;
-    Counters.Counter private _items;
-    Counters.Counter private _soldItems;
-
+    // Counters.Counter private _items;
+    // Counters.Counter private _soldItems;
+    uint256 _items;
+    uint256 _soldItems;
     address payable owner;
 
     uint256 listingPrice = 0.025 ether; // minimum price, change for what you want
